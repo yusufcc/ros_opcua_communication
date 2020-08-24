@@ -268,7 +268,7 @@ class OpcUaROSAction:
                     if object_counter < len(sample.__slots__):
                         cur_slot = sample.__slots__[object_counter]
                 real_slot = getattr(sample, cur_slot)
-                rospy.lodebug(
+                rospy.logdebug(
                     "cur_arg: " + str(cur_arg) + " cur_slot_name: " + str(cur_slot) + " real slot content: " + str(
                         real_slot))
                 if hasattr(real_slot, '_type'):
